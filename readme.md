@@ -3,6 +3,19 @@
 
 # CryptoService - Microserviço de Criptografia Híbrida para Redes P2P
 
+
+
+---
+
+## Cláusulas de Propriedade Intelectual
+
+Este projeto e todo o seu código-fonte são de propriedade exclusiva da empresa sob CNPJ: 406.54.082.0001/02, e estão protegidos por direitos autorais. É **estritamente proibida** a reprodução, modificação ou distribuição deste código sem a devida autorização expressa do titular dos direitos.  
+  
+Caso você deseje utilizar ou adaptar partes deste projeto, certifique-se de obter a devida autorização e/ou seguir as diretrizes de licenciamento estabelecidas pelo autor. Todos os direitos são reservados.
+O descumprimento do aviso previsto será passível de eventuais procedimentos legais.
+
+---
+
 ## Visão Geral
 
 O **CryptoService** é um microserviço desenvolvido em Java 21 com Spring Boot 3.4, projetado para atuar como a camada de criptografia em uma rede de comunicação ponto a ponto (P2P) com criptografia end-to-end.  
@@ -106,17 +119,6 @@ sequenceDiagram
 - **SLF4J com Logback:** Para logging estruturado, centralizado e configurável.
 - **Boas Práticas:** Clean Architecture, SOLID, Repository Pattern, TDD, retry com backoff exponencial e tratamento centralizado de erros.
 
----
-
-## Cláusulas de Propriedade Intelectual
-
-Este projeto e todo o seu código-fonte são de propriedade exclusiva da empresa sob CNPJ: 406.54.082.0001/02, e estão protegidos por direitos autorais. É **estritamente proibida** a reprodução, modificação ou distribuição deste código sem a devida autorização expressa do titular dos direitos.  
-  
-Caso você deseje utilizar ou adaptar partes deste projeto, certifique-se de obter a devida autorização e/ou seguir as diretrizes de licenciamento estabelecidas pelo autor. Todos os direitos são reservados.
-O descumprimento do aviso previsto será passível de eventuais procedimentos legais.
-
----
-
 ## Containerização
 
 ### Dockerfile
@@ -167,11 +169,11 @@ services:
 ### Diagrama de Arquitetura em Camadas
 ```mermaid
 graph LR
-    A[Cliente P2P] --> B[API REST (CryptoController)]
-    B --> C[Serviço (HybridCryptoService)]
-    C --> D[Domínio (HybridCrypto)]
+    A[Cliente P2P] --> B[API REST - CryptoController]
+    B --> C[Serviço - HybridCryptoService]
+    C --> D[Domínio - HybridCrypto]
     D --> E[KeyRepository / RedisKeyCache]
-    C --> F[Mensageria (RedisMessageQueue)]
+    C --> F[Mensageria - RedisMessageQueue]
 ```
 
 ### Diagrama de Fluxo de Operação Criptográfica

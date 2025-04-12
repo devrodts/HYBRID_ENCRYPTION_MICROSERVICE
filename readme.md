@@ -51,7 +51,6 @@ O projeto está organizado em camadas, cada uma com responsabilidades bem defini
 ## Fluxo de Comunicação e Criptografia
 
 ### 1. Fluxo de Dados (P2P End-to-End)
-  
 ```mermaid
 flowchart TD
     A[Cliente P2P] -->|Solicita operação| B(CryptoController)

@@ -53,15 +53,15 @@ O projeto está organizado em camadas, cada uma com responsabilidades bem defini
 ### 1. Fluxo de Dados (P2P End-to-End)
 ```mermaid
 flowchart TD
-    A[Cliente P2P] -->|Solicita operação| B(CryptoController)
+    A[Cliente P2P] --> B(CryptoController)
     B --> C(CryptoService)
     C --> D(HybridCrypto - Domínio)
     D --> E[KeyRepository / RedisKeyCache]
     C --> F[RedisMessageQueue]
-    D -->|Operação Criptográfica| G[Resultado Criptográfico]
+    D --> G[Resultado Criptográfico]
     G --> C
     C --> B
-    B -->|Resposta (Base64)| A
+    B --> A
 ```
 
 #### Descrição:

@@ -177,7 +177,7 @@ graph LR
 ```
 
 ### Diagrama de Fluxo de Operação Criptográfica
-```
+```mermaid
 flowchart TD
     subgraph CLIENT ["Cliente P2P - Requisições JSON com Base64"]
         A[Cliente P2P]
@@ -214,4 +214,4 @@ flowchart TD
     E --- F
     F --- G
 
-``
+```
